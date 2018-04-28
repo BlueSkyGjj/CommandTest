@@ -1,2 +1,4 @@
 This is the Readme.
 Append new content!!!
+git remote add origin remote_repository_name
+git push -u origin master
