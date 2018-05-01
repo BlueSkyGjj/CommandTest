@@ -2,3 +2,9 @@ This is the Readme.
 Append new content!!!
 git remote add origin remote_repository_name
 git push -u origin master
+
+# Git configure
+git config --global user.name "user's name"
+git config --global user.email user_name@126.com
+
+
