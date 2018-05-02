@@ -32,16 +32,46 @@ git rm --cached FileName
 移动文件
 git mv file_from file_to
 
-
 查看提交历史
 git log
 
--p，用来显示每次提交的内容差异,加上 -2 来仅显示最近两次提交;
+-p：用来显示每次提交的内容差异,加上 -2 来仅显示最近两次提交;
 git log -p -2
 
 想看到每次提交的简略的统计信息，可以使用 --stat 选项
 git log --stat
 
-另一个常用的选项是 --pretty，这个选项可以指定使用不同于默认格式的方式展示提交历史，最有意思的是 format，可以定制要显示的记录格式
+另一个常用的选项是 --pretty，该选项可以指定使用不同于默认格式的方式展示提交历史，最有意思的是 format，可以定制要显示的记录格式
 git log --pretty=oneline
 git log --pretty=format:"%h - %an, %ar : %s"
+git log -Sfunction_name
+
+提交命令尝试重新提交
+git commit --amend
+
+来取消暂存
+git reset HEAD CONTRIBUTING.md
+
+查看远程仓库
+git remote
+git remote show [remote-name]
+
+指定选项 -v，会显示需要读写远程仓库使用的 Git 保存的简写与其对应的 URL
+git remote -v
+
+添加远程仓库
+git remote add <shortname> <url>
+ex. git remote add pb https://github.com/paulboone/ticgit
+
+从远程仓库中抓取与拉取
+git fetch [remote-name]
+git pull 自动的抓取然后合并远程分支到当前分支
+
+推送到远程仓库
+git push [remote-name] [branch-name]
+
+远程仓库的移除与重命名
+git remote rename
+git remote rm
+
+
