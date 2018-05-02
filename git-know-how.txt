@@ -61,7 +61,7 @@ git remote -v
 
 添加远程仓库
 git remote add <shortname> <url>
-ex. git remote add pb https://github.com/paulboone/ticgit
+e.g: git remote add pb https://github.com/paulboone/ticgit
 
 从远程仓库中抓取与拉取
 git fetch [remote-name]
@@ -91,3 +91,12 @@ git tag v1.4-lw
 共享标签
 默认情况下，git push命令并不会传送标签到远程仓库服务器上；
 git push origin [tagname]
+
+Git别名
+git config --global alias.ci commit
+git config --global alias.st status
+git config --global alias.unstage 'reset HEAD --'
+git config --global alias.last 'log -1 HEAD'
+
+要执行外部命令，可以在外部命令之前加入！符号
+e.g: git config --global alias.visual '!gitk'
