@@ -74,4 +74,20 @@ git push [remote-name] [branch-name]
 git remote rename
 git remote rm
 
+Git可以给历史中的某一个提交打上标签，以示重要；
+列举标签
+git tag
+git tag -l 'v1.8.5*'
 
+创建标签(附注标签)
+git tag -a v1.4 -m 'my version 1.4'
+
+查看标签信息与对应的提交信息
+git show v1.4	
+
+创建轻量标签
+git tag v1.4-lw
+
+共享标签
+默认情况下，git push命令并不会传送标签到远程仓库服务器上；
+git push origin [tagname]
