@@ -100,3 +100,27 @@ git config --global alias.last 'log -1 HEAD'
 
 要执行外部命令，可以在外部命令之前加入！符号
 e.g: git config --global alias.visual '!gitk'
+
+
+git log --oneline --decorate
+
+创建/切换分支
+git branch branch-name
+git checkout branch_name
+
+合并分支
+git checkout master
+git merge branch-name
+
+删除分支
+git branch -d branch-name
+
+git branch 命令不只是可以创建与删除分支。 如果不加任何参数运行它，会得到当前所有分支的一个列表；
+如果需要查看每一个分支的最后一次提交，可以运行 git branch -v 命令；
+--merged 与 --no-merged 这两个有用的选项可以过滤这个列表中已经合并或尚未合并到当前分支的分支[git branch --merged ]
+
+跟踪分支是与远程分支有直接关系的本地分支；
+如果在一个跟踪分支上输入 git pull，Git 能自动地识别去哪个服务器上抓取、合并到哪个分支；
+运行 git checkout -b [branch] [remotename]/[branch]
+
+git fetch --all; git branch -vv
