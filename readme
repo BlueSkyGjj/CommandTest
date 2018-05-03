@@ -6,3 +6,6 @@ git push -u origin master
 # Git configure
 git config --global user.name "user's name"
 git config --global user.email user_name@126.com
+
+git log --oneline --decorate
+git checkout branch_name
